@@ -1,0 +1,18 @@
+.container {
+    width: fit-content;
+    margin: 0 auto;
+}
+.valid {
+    border: 1px solid black;
+}
+
+.error {
+    border: 1px solid red;
+}
+.error_text {
+    color: red;
+    display: block;
+}
+.add_button {
+    background-color: #80ff80;
+}

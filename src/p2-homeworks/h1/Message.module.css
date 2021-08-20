@@ -1,0 +1,43 @@
+.message {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 30px;
+    background-color: wheat;
+}
+.avatar img {
+    width: 100px;
+    border-radius: 50%;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: darkslategrey;
+    border-radius: 20px;
+    padding: 10px 30px;
+    position: relative;
+}
+.content:before {
+    content: "";
+    width: 0;
+    height: 0;
+    right: 94%;
+    top: 115px;
+    position: absolute;
+    border-top: 47px solid transparent;
+    border-right: 49px solid darkslategrey;
+    border-bottom: 0 solid transparent;
+}
+.content h2 {
+    color: #a701a7;
+}
+.content p {
+    color: wheat;
+}
+.time {
+    font-size: 0.8rem;
+    color: #45a0a0;
+    align-self: flex-end;
+}
