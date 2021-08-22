@@ -1,0 +1,13 @@
+.navbar {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+.nav_link {
+    text-decoration: none;
+    color: black;
+}
+.active_link {
+    font-weight: bold;
+    color: gold;
+}
