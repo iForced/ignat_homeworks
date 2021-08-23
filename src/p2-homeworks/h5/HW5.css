@@ -1,13 +1,55 @@
+.header {
+    position: relative;
+    height: 62px;
+}
 .navbar {
     display: flex;
+    border-radius: 5px;
     gap: 20px;
     padding: 20px;
+    background-color: #a701a7;
+    position: absolute;
+    left: -260px;
+    transition: .6s cubic-bezier(0.29, 0.13, 0.54, 1.26);
+}
+.navbar:hover {
+    left: -10px;
 }
 .nav_link {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .active_link {
     font-weight: bold;
     color: gold;
+}
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.error_pic {
+    animation: gradient 10s infinite linear;
+}
+@keyframes gradient {
+    0% {
+        color: #a701a7;
+    }
+    20% {
+        color: #80ff80;
+    }
+    40% {
+        color: red;
+    }
+    60% {
+        color: aqua;
+    }
+    80% {
+        color: blue;
+    }
+    100% {
+        color: #a701a7;
+    }
 }
