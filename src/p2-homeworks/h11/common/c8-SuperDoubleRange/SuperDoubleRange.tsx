@@ -1,22 +1,27 @@
 import React from 'react'
+import 'react-input-range/lib/css/index.css'
+import InputRange from "react-input-range";
 
 type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
-    value?: [number, number]
-    // min, max, step, disable, ...
+    onChangeRange?: (value: { min: number; max: number; }) => void
+    value: { value: { min: number; max: number; }; }
 }
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
         onChangeRange, value,
-        // min, max, step, disable, ...
     }
 ) => {
-    // сделать самому, можно подключать библиотеки
 
     return (
         <>
-            DoubleRange
+            <InputRange
+                minValue={0}
+                maxValue={100}
+                value={value.value}
+                // @ts-ignore (почему-то не работает типизация в этом месте для кастомного инпута)
+                onChange={onChangeRange}
+            />
         </>
     )
 }
